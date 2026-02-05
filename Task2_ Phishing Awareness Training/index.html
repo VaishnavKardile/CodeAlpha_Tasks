@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Defense: The Human Firewall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="matrix-bg"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="shield-icon">🛡️</span>
+            Shield<span class="logo-accent">Aware</span>
+        </div>
+        <div class="nav-links">
+            <button onclick="showSection('home')" class="active" data-section="home">
+                <span class="nav-icon">🏠</span> Home
+            </button>
+            <button onclick="showSection('vectors')" data-section="vectors">
+                <span class="nav-icon">⚠️</span> Attack Vectors
+            </button>
+            <button onclick="showSection('anatomy')" data-section="anatomy">
+                <span class="nav-icon">🔍</span> Anatomy
+            </button>
+            <button onclick="showSection('defense')" data-section="defense">
+                <span class="nav-icon">🛡️</span> Defense Tips
+            </button>
+            <button onclick="showSection('quiz')" data-section="quiz">
+                <span class="nav-icon">🎯</span> Quiz
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero-section">
+                <div class="glitch-text" data-text="THE HUMAN FIREWALL">THE HUMAN FIREWALL</div>
+                <p class="hero-subtitle">
+                    <span class="stat-highlight">90%</span> of data breaches start with a phishing attack.<br>
+                    You are the target, but you are also the <span class="text-highlight">first line of defense</span>.
+                </p>
+                <button class="btn-primary pulse-btn" onclick="showSection('vectors')">
+                    <span>🚀 Start Learning</span>
+                </button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">$4.65M</div>
+                    <div class="stat-label">Average Cost of a Data Breach (2023)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3.4B</div>
+                    <div class="stat-label">Phishing Emails Sent Daily</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">32%</div>
+                    <div class="stat-label">Of Breaches Involve Phishing</div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card card-hover">
+                    <div class="card-icon">🧠</div>
+                    <h3>Psychology of Deception</h3>
+                    <p>Attackers don't just hack computers; they hack people. They exploit <strong>urgency</strong>, <strong>fear</strong>, and <strong>authority</strong> to bypass your logical thinking and trigger impulsive reactions.</p>
+                    <div class="card-footer">Learn the mental triggers</div>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Defense in Depth</h3>
+                    <p>Technology helps, but behavioral changes are critical. Learn to verify requests "Out-of-Band" and recognize the subtle signs of social engineering.</p>
+                    <div class="card-footer">Build your defenses</div>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon">📱</div>
+                    <h3>Beyond Email</h3>
+                    <p>Phishing isn't just in your inbox anymore. It's in your SMS (Smishing), your phone calls (Vishing), and even on parking meters (Quishing).</p>
+                    <div class="card-footer">Know all attack surfaces</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATTACK VECTORS SECTION -->
+        <section id="vectors" class="section">
+            <h2 class="section-title">
+                <span class="title-icon">⚠️</span>
+                Modern Attack Vectors
+            </h2>
+            <p class="section-subtitle">Understanding the enemy is the first step to victory</p>
+
+            <div class="grid">
+                <div class="card threat-card">
+                    <div class="threat-badge">HIGH RISK</div>
+                    <h3 class="threat-title">
+                        <span class="threat-icon">📞</span>
+                        Vishing (Voice Phishing)
+                    </h3>
+                    <p>Attackers call pretending to be "IT Support," "The Bank," or even law enforcement.</p>
+                    <div class="alert-box">
+                        <strong>🚨 New Threat: AI Voice Cloning</strong><br>
+                        Attackers can now clone a CEO's or family member's voice using just 3 seconds of audio from social media or public recordings.
+                    </div>
+                    <div class="example-box">
+                        <strong>Real Example:</strong> "Hi, this is Mark from IT. We detected suspicious activity on your account. I need you to verify your password to secure it."
+                    </div>
+                </div>
+
+                <div class="card threat-card">
+                    <div class="threat-badge">EMERGING</div>
+                    <h3 class="threat-title">
+                        <span class="threat-icon">📱</span>
+                        Quishing (QR Phishing)
+                    </h3>
+                    <p>Malicious QR codes placed on parking meters, restaurant menus, or fake flyers.</p>
+                    <div class="alert-box">
+                        <strong>🚨 Tactic:</strong> Stickers are placed <em>over</em> legitimate codes. Scanning takes you to a fake payment site to steal credit card info.
+                    </div>
+                    <div class="example-box">
+                        <strong>Real Example:</strong> A fake QR code on a parking meter redirects to a convincing clone of the city's parking payment site.
+                    </div>
+                </div>
+
+                <div class="card threat-card">
+                    <div class="threat-badge">CRITICAL</div>
+                    <h3 class="threat-title">
+                        <span class="threat-icon">🔔</span>
+                        MFA Fatigue
+                    </h3>
+                    <p>Spamming your phone with "Approve Login" notifications, often at inconvenient times like 2 AM.</p>
+                    <div class="alert-box">
+                        <strong>🚨 Defense:</strong> Never approve a request you didn't initiate. If they call claiming it's a "glitch," hang up immediately.
+                    </div>
+                    <div class="example-box">
+                        <strong>Real Example:</strong> Uber breach (2022) - Attacker spammed employee with MFA requests, then called pretending to be IT to get approval.
+                    </div>
+                </div>
+
+                <div class="card threat-card">
+                    <div class="threat-badge">COMMON</div>
+                    <h3 class="threat-title">
+                        <span class="threat-icon">💬</span>
+                        Smishing (SMS Phishing)
+                    </h3>
+                    <p>Fake text messages claiming to be from delivery services, banks, or government agencies.</p>
+                    <div class="alert-box">
+                        <strong>🚨 Red Flag:</strong> Messages with urgent requests and shortened links (bit.ly, tinyurl) are almost always malicious.
+                    </div>
+                    <div class="example-box">
+                        <strong>Real Example:</strong> "Your package delivery failed. Update address: [malicious link]"
+                    </div>
+                </div>
+
+                <div class="card threat-card">
+                    <div class="threat-badge">SOPHISTICATED</div>
+                    <h3 class="threat-title">
+                        <span class="threat-icon">🎣</span>
+                        Spear Phishing
+                    </h3>
+                    <p>Highly targeted attacks using personal information gathered from social media and data breaches.</p>
+                    <div class="alert-box">
+                        <strong>🚨 Warning:</strong> These emails reference real projects, colleagues, and events making them extremely convincing.
+                    </div>
+                    <div class="example-box">
+                        <strong>Real Example:</strong> "Hi Sarah, per our meeting yesterday about Project Phoenix, here's the budget document [malware attachment]"
+                    </div>
+                </div>
+
+                <div class="card threat-card">
+                    <div class="threat-badge">BUSINESS RISK</div>
+                    <h3 class="threat-title">
+                        <span class="threat-icon">💼</span>
+                        Business Email Compromise (BEC)
+                    </h3>
+                    <p>Attackers impersonate executives or vendors to authorize fraudulent wire transfers.</p>
+                    <div class="alert-box">
+                        <strong>🚨 Impact:</strong> Average BEC attack results in $125,000 loss. Some exceed $1 million.
+                    </div>
+                    <div class="example-box">
+                        <strong>Real Example:</strong> Email from "CEO" to finance: "I'm in a meeting with our lawyers. Wire $50k to this account for the acquisition. Urgent and confidential."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANATOMY SECTION -->
+        <section id="anatomy" class="section">
+            <h2 class="section-title">
+                <span class="title-icon">🔍</span>
+                Anatomy of a Phishing Email
+            </h2>
+            <p class="section-subtitle">Hover over the highlighted areas to reveal why they're suspicious</p>
+            
+            <div class="email-container">
+                <div class="email-header">
+                    <div class="email-meta">
+                        <strong>From:</strong> 
+                        <span class="hotspot" data-tooltip="🚩 COUSIN DOMAIN: This says @microsoft-security-alert.com, NOT @microsoft.com. Attackers register domains that look similar to legitimate ones.">
+                            IT Support &lt;admin@microsoft-security-alert.com&gt;
+                        </span>
+                    </div>
+                    <div class="email-meta">
+                        <strong>Subject:</strong> 
+                        <span class="hotspot" data-tooltip="🚩 URGENCY + FEAR: 'URGENT' and 'Final Notice' are designed to make you panic and bypass critical thinking. Legitimate companies rarely use this language.">
+                            URGENT: Password Expiry - Final Notice
+                        </span>
+                    </div>
+                    <div class="email-meta">
+                        <strong>Date:</strong> Today 3:47 AM
+                        <span class="hotspot" data-tooltip="🚩 TIMING: Sent at an unusual hour (3:47 AM) when you're less alert and more likely to make mistakes.">⏰</span>
+                    </div>
+                </div>
+                
+                <div class="email-body">
+                    <p>Dear <span class="hotspot" data-tooltip="🚩 GENERIC GREETING: 'User' or 'Customer' indicates a mass-blast email. Legitimate companies use your actual name.">User</span>,</p>
+                    
+                    <p>Your network access will be <span class="hotspot" data-tooltip="🚩 THREAT: Creating fear of negative consequences (account suspension) is a classic manipulation tactic.">suspended in 24 hours</span> due to a security irregularity detected on your account.</p>
+                    
+                    <p>Please click the link below to validate your credentials immediately.</p>
+                    
+                    <p style="text-align: center; margin: 20px 0;">
+                        <a href="#" class="fake-button hotspot" data-tooltip="🚩 MALICIOUS LINK: Hovering reveals this goes to 'hxxp://malicious-site.ru/login' NOT a Microsoft domain. NEVER click verify buttons in emails.">
+                            [VERIFY ACCOUNT NOW]
+                        </a>
+                    </p>
+                    
+                    <p><span class="hotspot" data-tooltip="🚩 URGENCY REINFORCEMENT: Repeating the time pressure to force hasty action without verification.">Failure to comply within 24 hours will result in permanent account deletion.</span></p>
+                    
+                    <p>Thank you,<br>
+                    <span class="hotspot" data-tooltip="🚩 VAGUE SIGNATURE: 'System Administrator' with no specific name, department, or contact information.">System Administrator</span></p>
+                    
+                    <div class="email-footer">
+                        <span class="hotspot" data-tooltip="🚩 POOR GRAMMAR: Notice the typo 'confidencial' and awkward phrasing - common in phishing emails.">
+                            This is an automated message. Please do not reply. This email contains confidencial information.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top: 2rem;">
+                <div class="card tip-card">
+                    <h3>🖱️ The Hover Test</h3>
+                    <p><strong>Desktop:</strong> Hover your mouse over any link without clicking to see the actual URL in the bottom-left corner of your browser.</p>
+                    <p><strong>Mobile:</strong> Long-press the link to preview the destination address before opening.</p>
+                </div>
+
+                <div class="card tip-card">
+                    <h3>🔍 Look for Red Flags</h3>
+                    <ul>
+                        <li>Misspelled domains (micros0ft.com)</li>
+                        <li>Generic greetings ("Dear Customer")</li>
+                        <li>Urgent threats or rewards</li>
+                        <li>Grammar/spelling errors</li>
+                        <li>Requests for sensitive info</li>
+                    </ul>
+                </div>
+
+                <div class="card tip-card">
+                    <h3>✅ When In Doubt</h3>
+                    <p>Go directly to the official website (type it yourself) or call the company using a verified phone number from their website - NOT from the email.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEFENSE TIPS SECTION -->
+        <section id="defense" class="section">
+            <h2 class="section-title">
+                <span class="title-icon">🛡️</span>
+                Your Defense Playbook
+            </h2>
+            <p class="section-subtitle">Practical strategies to protect yourself and your organization</p>
+
+            <div class="defense-grid">
+                <div class="defense-card">
+                    <div class="defense-number">1</div>
+                    <h3>Verify Out-of-Band</h3>
+                    <p>If you receive an unexpected request (especially financial), verify it through a different communication channel.</p>
+                    <div class="example-box">
+                        <strong>Example:</strong> Email asks you to wire money? Call the person directly using a known phone number - NOT the number in the email.
+                    </div>
+                </div>
+
+                <div class="defense-card">
+                    <div class="defense-number">2</div>
+                    <h3>Enable Strong MFA</h3>
+                    <p>Use authenticator apps or hardware tokens instead of SMS. SMS can be intercepted through SIM swapping.</p>
+                    <div class="example-box">
+                        <strong>Best Options:</strong> Google Authenticator, Microsoft Authenticator, YubiKey
+                    </div>
+                </div>
+
+                <div class="defense-card">
+                    <div class="defense-number">3</div>
+                    <h3>Think Before You Click</h3>
+                    <p>Pause when you feel urgency. That's exactly what attackers want. Take 30 seconds to verify.</p>
+                    <div class="example-box">
+                        <strong>Ask Yourself:</strong> Was I expecting this? Does the sender address match? Is there urgency/fear?
+                    </div>
+                </div>
+
+                <div class="defense-card">
+                    <div class="defense-number">4</div>
+                    <h3>Use Password Managers</h3>
+                    <p>They auto-fill only on legitimate sites. If your password manager doesn't fill the form, you might be on a fake site.</p>
+                    <div class="example-box">
+                        <strong>Bonus:</strong> Generates unique passwords for every site, preventing credential stuffing attacks.
+                    </div>
+                </div>
+
+                <div class="defense-card">
+                    <div class="defense-number">5</div>
+                    <h3>Report Suspicious Activity</h3>
+                    <p>Forward phishing emails to your IT/Security team and report to authorities when appropriate.</p>
+                    <div class="example-box">
+                        <strong>US:</strong> Report to FTC at reportphishing@apwg.org
+                    </div>
+                </div>
+
+                <div class="defense-card">
+                    <div class="defense-number">6</div>
+                    <h3>Keep Systems Updated</h3>
+                    <p>Enable automatic updates for OS, browsers, and security software. Many attacks exploit known vulnerabilities.</p>
+                    <div class="example-box">
+                        <strong>Critical:</strong> Update within 24-48 hours of security patch releases.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section id="quiz" class="section">
+            <h2 class="section-title">
+                <span class="title-icon">🎯</span>
+                Phishing Awareness Challenge
+            </h2>
+            <p class="section-subtitle">Test your skills. Can you spot the deception?</p>
+            
+            <div id="quiz-container"></div>
+            
+            <div id="quiz-controls">
+                <button id="finish-btn" class="btn-primary" style="display: none;">
+                    Show My Results
+                </button>
+            </div>
+
+            <div id="quiz-score" style="display: none;">
+                <div class="score-container">
+                    <h3>Quiz Complete!</h3>
+                    <div class="score-display">
+                        <div class="score-value" id="score-val">0</div>
+                        <div class="score-total">/ 5</div>
+                    </div>
+                    <div id="score-message"></div>
+                    <div class="score-breakdown" id="score-breakdown"></div>
+                    <button class="btn-primary" onclick="resetQuiz()">Try Again</button>
+                    <button class="btn-secondary" onclick="showSection('home')">Back to Home</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>🛡️ <strong>ShieldAware</strong> - Empowering the Human Firewall</p>
+            <p>Generated for Educational Purposes | Stay Vigilant, Stay Safe</p>
+            <p class="footer-note">Remember: When in doubt, verify out-of-band!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
