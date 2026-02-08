@@ -27,6 +27,15 @@ social engineering techniques, and best practices for online safety.
 
 ---
 
+## 📌 Task 3: Secure Coding Review
+**Description:**  
+Performed a secure coding review of a Python-based login application to identify
+security vulnerabilities and recommend secure coding best practices.
+
+**Technologies:** Python, Secure Coding Principles
+
+📁 Folder: `Task3_Secure_Coding_Review`
+
 ## Author
 **Vaishnav Ravikiran Kardile**  
 Cybersecurity Intern – CodeAlpha
